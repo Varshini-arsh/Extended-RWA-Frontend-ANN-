@@ -111,6 +111,9 @@ export default function App() {
             <button className="button button-secondary" onClick={checkBackend} disabled={apiStatus === "checking"} type="button">
               {apiStatus === "checking" ? "Checking..." : "Test backend connection"}
             </button>
+            <a className="button button-secondary" href="/zkp-demo/" target="_blank" rel="noreferrer">
+              ZK investor onboarding ↗
+            </a>
             <span className="endpoint-hint">GET /health · POST /predict</span>
           </div>
         </section>

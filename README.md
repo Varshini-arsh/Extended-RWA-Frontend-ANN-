@@ -42,3 +42,15 @@ npm run build
 After changing the environment variable, trigger a new deployment.
 
 The backend must allow your Vercel domain through its CORS configuration. Replace the sample JSON in `src/App.jsx` with your model's actual API input schema before testing predictions.
+
+## Hedera ZK investor onboarding demo
+
+The home page links to `/zkp-demo/`, a standalone wallet-connected demo for
+the V5 zero-knowledge eligibility flow and ERC-3643 token contracts on
+Hedera Testnet. It is served from `public/zkp-demo/` and does not change the
+ANN `/predict` request or require a new Python API endpoint.
+
+The demo uses MetaMask, calls the deployed contracts directly, and includes
+three public sample proofs. These are testnet demo proofs; each nullifier can
+only be used once. Before publishing a redeployed version, update the
+addresses in `public/zkp-demo/index.html` and verify them on HashScan.
